@@ -85,16 +85,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div>${item.price.toFixed(2)} SAR</div>
             </div>
         `).join('');
+        
+        const deliveryHtml = data.delivery_fee !== undefined ? `
+            <div class="basket-item" style="color: #a1a1aa; border-top: 1px dashed rgba(255,255,255,0.1); margin-top: 8px; padding-top: 8px;">
+                <div>رسوم التوصيل</div>
+                <div>${data.delivery_fee.toFixed(2)} SAR</div>
+            </div>
+        ` : '';
 
         return `
-            <p>I found the perfect match for you!</p>
+            <p>لقيت لك الطلب المناسب!</p>
             <div class="receipt">
                 <div class="receipt-header">
                     <h3>${data.restaurant} <span class="eta">${data.estimated_arrival}</span></h3>
                 </div>
                 ${itemsHtml}
+                ${deliveryHtml}
                 <div class="receipt-total">
-                    <span>Total</span>
+                    <span>المجموع</span>
                     <span>${data.total_price.toFixed(2)} SAR</span>
                 </div>
                 <div class="match-reason">

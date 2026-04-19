@@ -149,6 +149,7 @@ Return a JSON response strictly matching this schema:
     }
   ],
   "restaurant": "Restaurant Name",
+  "delivery_fee": 10.00,
   "total_price": 0.00,
   "estimated_arrival": "XX mins",
   "match_reason": "Briefly explain why this fits their history and current request."
