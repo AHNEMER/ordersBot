@@ -1,11 +1,12 @@
-# HungerStation AI Assistant
+## The Problem
+Many food delivery users struggle with *decision fatigue*. They often spend a long time browsing through countless options trying to find a meal that perfectly matches their specific, real-time cravings—whether that's a strict budget, a precise calorie limit, or a desire for lightning-fast delivery time. This assistant eliminates the endless scrolling by instantly analyzing their constraints and historical preferences to serve up the perfect customized recommendation.
 
-![App Output](./Screenshot%202026-04-19%20at%202.51.12%20PM.png)
+# food order AI Assistant
 
 An intelligent, conversational recommendation agent for food delivery built with Node.js, Express, and Google's Gemini LLM. The AI dynamically adapts to user history, current constraints (time, budget, calorie count), and resolves ambiguities by asking clarifying questions using a modern web interface.
 
-## The Problem
-Many food delivery users struggle with *decision fatigue*. They often spend a long time browsing through countless options trying to find a meal that perfectly matches their specific, real-time cravings—whether that's a strict budget, a precise calorie limit, or a desire for lightning-fast delivery time. This assistant eliminates the endless scrolling by instantly analyzing their constraints and historical preferences to serve up the perfect customized recommendation.
+![App Output](./Screenshot%202026-04-19%20at%202.51.12%20PM.png)
+
 
 ## Architecture & Logic Flow
 
