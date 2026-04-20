@@ -48,3 +48,25 @@ To host the application:
 3. Create a new Node Web Service.
 4. Add your `GEMINI_API_KEY` into the provider's Environment Variables or Secrets manager.
 5. Deploy using the default `npm start` build command.
+
+
+
+
+## 🌐 Real-World Deployment: Local LLM & Edge Inference
+
+To eliminate API costs and ensure total data privacy, this project can be transitioned from cloud-based APIs to a **Local Edge Inference** strategy. This allows the assistant to function without per-token fees or internet-dependency for the reasoning engine.
+
+### 1. Local Inference Setup
+The architecture supports **Ollama** or **vLLM** as the inference server. These provide an OpenAI-compatible API that the Node.js backend can target.
+
+* **Recommended Model:** `Llama-3.3-8B` (Quantized) or `Gemma-2-9B`.
+* **Hardware:** A GPU with 12GB+ VRAM (e.g., RTX 3060/4060 Ti) is recommended for sub-second response times.
+
+**To switch to local mode:**
+```bash
+# 1. Install Ollama and pull your preferred model
+ollama pull llama3.3:8b
+
+# 2. Update your .env to point to the local instance
+AI_MODE=local
+LOCAL_LLM_URL=http://localhost:11434/v1
